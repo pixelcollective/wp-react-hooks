@@ -1,0 +1,57 @@
+---
+name: useBlocks
+menu: Block
+route: /use-blocks
+---
+
+# useBlocks
+
+The `useBlocks` hook returns the current active blocks.
+
+## Import
+
+```jsx
+import {useBlocks} from '@tinypixelco/wp-react-hooks'
+```
+
+## Usage
+
+```jsx
+const {blocks, count} = useBlocks()
+```
+
+## Examples
+
+### useBlocks hook
+
+```jsx
+import {useBlockEditorStore} from './store/useBlockEditorStore'
+
+const useBlocks = () => {
+  const {select} = useBlockEditorStore()
+
+  return {
+    blocks: select.getBlocks(),
+    count: select.getGlobalBlockCount(),
+  }
+}
+
+export {useBlocks}
+
+```
+
+### Display count of blocks used in post
+
+```jsx
+import {useBlocks} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const {count} = useBlocks()
+
+  return (
+    <div>
+      Blocks used: {count || null}
+    </div>
+  )
+}
+```

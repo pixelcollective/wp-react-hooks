@@ -5,15 +5,11 @@ import {useBlockEditorStore} from './store/useBlockEditorStore'
  * Hook: useBlocks
  */
 const useBlocks = () => {
-  const {select, dispatch} = useBlockEditorStore()
+  const {select} = useBlockEditorStore()
 
   return {
-    selected: select.getSelectedBlock(),
-    selectNext: dispatch.selectNextBlock(),
-    selectPrevious: dispatch.selectPreviousBlock(),
     blocks: select.getBlocks(),
     count: select.getGlobalBlockCount(),
-    settings: select.getSettings(),
   }
 }
 

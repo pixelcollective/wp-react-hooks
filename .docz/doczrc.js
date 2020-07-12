@@ -3,4 +3,11 @@ module.exports = {
   base: '/wp-react-hooks/',
   src: 'src',
   dest: 'docs',
+  menu: [
+    { name: 'Overview', menu: ['Hooks'] },
+    { name: 'Block' },
+    { name: 'Post' },
+    { name: 'General' },
+    { name: 'Data' },
+  ],
 }

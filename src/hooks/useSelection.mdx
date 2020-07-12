@@ -1,5 +1,6 @@
 ---
 name: useSelection
+menu: Block
 route: /use-selection
 ---
 
@@ -7,15 +8,11 @@ route: /use-selection
 
 The `useSelection` hook provides a way of consuming and modifying which blocks are currently selected.
 
-## Getting started
-
-1. Import the hook.
+## Usage
 
 ```jsx
 import {useSelection} from '@tinypixelco/wp-react-hooks'
 ```
-
-2. Call the hook in the top-level of your component.
 
 ```jsx
 const {selection, setSelection} = useSelection()
@@ -77,9 +74,8 @@ const component = ({clientId}) => {
 
 Any actual use of `setSelection` would likely involve you:
 
-- Getting the block ID you want to select through some means.
-- Having some criteria that needs to be met to trigger the selection.
+- Getting the block ID you want to select. There are other hooks in this library which may help.
+- Developing criteria that needs to be met to trigger the selection (our example sidesteps this by just always firing, which is probably not what you want.)
 - Calling `setSelection` when that criteria is met.
 
 But, this example allows us to demonstrate the functionality of the component in isolation.
-

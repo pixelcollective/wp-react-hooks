@@ -5,7 +5,7 @@ const usePostTemplate = () => {
     template: select('core/edit-post').getEditedPostAttribute('template'),
   }))
 
-  return {template}
+  return [template]
 }
 
 export {usePostTemplate}

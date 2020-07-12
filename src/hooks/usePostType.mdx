@@ -1,0 +1,37 @@
+---
+name: usePostType
+menu: Post
+route: /use-post-type
+---
+
+# usePostType
+
+The `usePostType` hook returns the current post's posttype.
+
+## Import
+
+```jsx
+import {usePostType} from '@tinypixelco/wp-react-hooks'
+```
+
+## Usage
+
+```jsx
+const [postType] = usePostType()
+```
+
+## Example
+
+```js
+import {usePostType} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const [postType] = usePostType()
+
+  return (
+    <div>
+      Post type: {postType || ''}
+    </div>
+  )
+}
+```

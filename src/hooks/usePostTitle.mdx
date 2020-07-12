@@ -1,0 +1,63 @@
+---
+name: usePostTitle
+menu: Post
+route: /use-post-title
+---
+
+# usePostTitle
+
+The `usePostTitle` hook returns the current post title and a function to update it.
+
+## Import
+
+```jsx
+import {usePostTitle} from '@tinypixelco/wp-react-hooks'
+```
+
+## Usage
+
+```jsx
+const [postTitle, setPostTitle] = usePostTitle()
+```
+
+## Examples
+
+### Display post title
+
+```js
+import {usePostTitle} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const [postTitle] = usePostTitle()
+
+  return (
+    <div>
+      Post title: {postTitle || null}
+    </div>
+  )
+}
+```
+
+### Update post title
+
+Here we are setting the post title to uppercase (if it isn't already).
+
+```js
+import {useEffect} from '@wordpress/element'
+import {usePostTitle} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const [title, setTitle] = usePostTitle()
+
+  useEffect(() => {
+    title !== title.toUpperCase()
+      && setTitle(title.toUpperCase())
+  }, [title])
+
+  return (
+    <div>
+      {title || ''}
+    </div>
+  )
+}
+```

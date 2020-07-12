@@ -1,0 +1,36 @@
+---
+name: useBlockEditorStore
+menu: Data
+route: /store/use-block-editor-store
+---
+
+# useBlockEditorStore
+
+The `useBlockEditorStore` hook wraps `select` and `dispatch` on the `core/block-editor` store.
+
+It is primarily intended to be used internally by wp-react-hooks, but it is also fine to import it.
+
+## Import
+
+```jsx
+import {useBlockEditorStore} from '@tinypixelco/wp-react-hooks'
+```
+
+## Usage
+
+```jsx
+const {select, dispatch} = useBlockEditorStore()
+```
+
+### Source
+
+```jsx
+import {select, dispatch} from '@wordpress/data'
+
+const useBlockEditorStore = () => ({
+  select: select('core/block-editor'),
+  dispatch: dispatch('core/block-editor'),
+})
+
+export {useBlockEditorStore}
+```

@@ -1,0 +1,37 @@
+---
+name: usePostTemplate
+menu: Post
+route: /use-post-template
+---
+
+# usePostTemplate
+
+The `usePostTemplate` hook returns the current active template.
+
+## Import
+
+```jsx
+import {usePostTemplate} from '@tinypixelco/wp-react-hooks'
+```
+
+## Usage
+
+```jsx
+const [template] = usePostTemplate()
+```
+
+## Example
+
+```jsx
+import {usePostTemplate} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const [template] = usePostTemplate()
+
+  return (
+    <div>
+      Current template: {template || ''}
+    </div>
+  )
+}
+```
