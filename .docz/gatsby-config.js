@@ -36,7 +36,7 @@ const config = {
           { name: 'Overview', menu: ['Hooks'] },
           { name: 'Block' },
           { name: 'Post' },
-          { name: 'General' },
+          { name: 'Editor' },
           { name: 'Data' },
         ],
         mdPlugins: [],

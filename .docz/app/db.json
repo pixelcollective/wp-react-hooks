@@ -16,7 +16,7 @@
         "name": "Post"
       },
       {
-        "name": "General"
+        "name": "Editor"
       },
       {
         "name": "Data"
@@ -51,18 +51,18 @@
           },
           {
             "slug": "block-hooks",
-            "depth": 3,
+            "depth": 2,
             "value": "Block hooks"
           },
           {
-            "slug": "post",
-            "depth": 3,
-            "value": "Post"
+            "slug": "post-hooks",
+            "depth": 2,
+            "value": "Post hooks"
           },
           {
-            "slug": "general",
-            "depth": 3,
-            "value": "General"
+            "slug": "editor-hooks",
+            "depth": 2,
+            "value": "Editor hooks"
           }
         ]
       }
@@ -271,7 +271,7 @@
       "key": "src/src/hooks/useSettings.mdx",
       "value": {
         "name": "useSettings",
-        "menu": "General",
+        "menu": "Editor",
         "route": "/use-settings",
         "id": "11b3230b78723463661e0f6b9ff52888",
         "filepath": "src/src/hooks/useSettings.mdx",
