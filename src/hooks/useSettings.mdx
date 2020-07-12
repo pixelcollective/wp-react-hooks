@@ -7,34 +7,38 @@ route: /use-settings
 
 The `useSettings` hook provides an interface for consuming and modifying block editor settings.
 
-To get started, import it:
+## Getting started
 
-```js
+1. Import the hook.
+
+```jsx
 import {useSettings} from '@tinypixelco/wp-react-hooks'
 ```
 
-Once imported, call the hook. It will return an array with the settings object and a function to modify it.
+2. Call the hook in the top-level of your component.
 
-```js
+```jsx
 const [settings, setSettings] = useSettings()
 ```
 
+The hook returns an array with the settings object and a function to modify the settings object.
+
 ## Basic example
 
-```jsx
-import {useEffect} from '@wordpress/element'
+```js
 import {useSettings} from '@tinypixelco/wp-react-hooks'
+import {useEffect} from '@wordpress/element'
 
 const component = () => {
   const [settings, setSettings] = useSettings()
 
-  useEffect(() => {
-    settings && console.log(settings)
-  }, [settings])
-
-  return []
+  return (
+    <div>
+      {settings && JSON.stringify(settings)}
+    </div>
+  )
 }
-```
+````
 
 ## Use cases
 
@@ -48,7 +52,7 @@ useEffect(() => {
 }, [])
 ```
 
-### Add a new font size
+### Dynamically add a new font size.
 
 ```jsx
 const dynamicFontSize = {
@@ -80,7 +84,7 @@ useEffect(() => {
 }, [])
 ```
 
-## Additional details
+## Details
 
 This hook utilizes [store/useBlockEditorStore](/store/use-block-editor-store).
 

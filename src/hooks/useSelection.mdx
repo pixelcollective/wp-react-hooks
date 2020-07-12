@@ -1,0 +1,85 @@
+---
+name: useSelection
+route: /use-selection
+---
+
+# useSelection
+
+The `useSelection` hook provides a way of consuming and modifying which blocks are currently selected.
+
+## Getting started
+
+1. Import the hook.
+
+```jsx
+import {useSelection} from '@tinypixelco/wp-react-hooks'
+```
+
+2. Call the hook in the top-level of your component.
+
+```jsx
+const {selection, setSelection} = useSelection()
+```
+
+## selection
+
+```js
+import {useSelection} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const {selection} = useSelection()
+
+  return (
+    <div>
+      {selection && JSON.stringify(selection)}
+    </div>
+  )
+}
+````
+
+The `selection` object looks like this:
+
+```jsx
+{
+  attributes: {}
+  clientId: "881d5ee3-1672-4607-8b65-1fa7877adf0d"
+  innerBlocks: []
+  isValid: true
+  name: 'acme-co/acme-block'
+}
+```
+
+## setSelection
+
+This block will always be selected.
+
+```jsx
+import {useSelection} from '@tinypixelco/wp-react-hooks'
+
+const component = ({clientId}) => {
+  const {selection, setSelection} = useSelection()
+
+  useEffect(() => {
+    const notSelected = selection.clientId !== clientId
+
+    if (notSelected) {
+      setSelection(clientId)
+    }
+  }, [selection])
+
+  return (
+    <div>
+      Annoyingly, this block is always selected.
+    </div>
+  )
+}
+```
+
+Any actual use of `setSelection` would likely involve you:
+
+- Getting the block ID you want to select through some means.
+- Having some criteria that needs to be met to trigger the selection.
+- Calling `setSelection` when that criteria is met.
+
+But, this example allows us to demonstrate the functionality of the component in isolation.
+

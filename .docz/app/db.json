@@ -29,11 +29,42 @@
             "slug": "wp-react-hooks",
             "depth": 1,
             "value": "WP React Hooks"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/src/hooks/useSelection.mdx",
+      "value": {
+        "name": "useSelection",
+        "route": "/use-selection",
+        "id": "771729dec72c81f7481db21ad09d5f1f",
+        "filepath": "src/src/hooks/useSelection.mdx",
+        "fullpath": "/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/src/hooks/useSelection.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-src-hooks-use-selection",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "useselection",
+            "depth": 1,
+            "value": "useSelection"
           },
           {
-            "slug": "learn-more",
+            "slug": "getting-started",
             "depth": 2,
-            "value": "Learn more"
+            "value": "Getting started"
+          },
+          {
+            "slug": "selection",
+            "depth": 2,
+            "value": "selection"
+          },
+          {
+            "slug": "setselection",
+            "depth": 2,
+            "value": "setSelection"
           }
         ]
       }
@@ -57,6 +88,11 @@
             "value": "useSettings"
           },
           {
+            "slug": "getting-started",
+            "depth": 2,
+            "value": "Getting started"
+          },
+          {
             "slug": "basic-example",
             "depth": 2,
             "value": "Basic example"
@@ -72,9 +108,9 @@
             "value": "Modify the post title placeholder"
           },
           {
-            "slug": "add-a-new-font-size",
+            "slug": "dynamically-add-a-new-font-size",
             "depth": 3,
-            "value": "Add a new font size"
+            "value": "Dynamically add a new font size."
           },
           {
             "slug": "disable-custom-style-settings",
@@ -82,9 +118,9 @@
             "value": "Disable custom style settings"
           },
           {
-            "slug": "additional-details",
+            "slug": "details",
             "depth": 2,
-            "value": "Additional details"
+            "value": "Details"
           },
           {
             "slug": "the-settings-object",

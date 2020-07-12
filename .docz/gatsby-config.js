@@ -62,7 +62,7 @@ const config = {
         title: '@tinypixelco/wp-react-hooks',
         description: 'My awesome app using docz',
         host: 'localhost',
-        port: 3000,
+        port: 3002,
         p: 3000,
         separator: '-',
         paths: {

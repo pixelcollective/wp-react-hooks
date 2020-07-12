@@ -24,12 +24,14 @@
     "doc:serve": "docz build && docz serve"
   },
   "devDependencies": {
+    "@mdx-js/react": "^1.6.6",
     "@roots/bud": "roots/bud#master",
     "@roots/bud-generators": "roots/bud-generators#master",
     "@roots/budpack": "^0.0.27",
     "@wordpress/data": "^4.22.0",
     "@wordpress/element": "^2.16.0",
     "docz": "^2.3.1",
+    "prism-react-renderer": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
