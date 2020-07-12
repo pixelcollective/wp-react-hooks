@@ -1,0 +1,21 @@
+import {useEffect, useState} from '@wordpress/element'
+
+/**
+ * Hook: use{{pascalcase hookName}}
+ * @typedef {function (initialValue: string) => {array} use{{pascalcase hookName}}
+ * @param   {string} initialValue
+ * @return  {array}
+ */
+const use{{pascalcase hookName}} = initialValue => {
+  const [{{lowercase hookName}}, set{{pascalcase hookName}}] = useState(null)
+  useEffect(() => {
+    !{{lowercase hookName}} && set{{pascalcase hookName}}(initialValue)
+  }, [{{lowercase hookName}}])
+
+  return [
+    {{lowercase hookName}},
+    set{{pascalcase hookName}},
+  ]
+}
+
+export { use{{pascalcase hookName}} }

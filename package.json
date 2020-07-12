@@ -1,0 +1,31 @@
+{
+  "name": "@tinypixelco/wp-react-hooks",
+  "homepage": "https://tinypixel.dev",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Kelly M.",
+      "email": "developers@tinypixel.dev"
+    }
+  ],
+  "private": false,
+  "main": "src/hooks.js",
+  "scripts": {
+    "bud:generate": "bud",
+    "dev": "budpack --env development",
+    "build": "budpack --env production"
+  },
+  "devDependencies": {
+    "@roots/bud": "roots/bud#master",
+    "@roots/bud-generators": "roots/bud-generators#master",
+    "@roots/budpack": "^0.0.27",
+    "@wordpress/data": "^4.22.0",
+    "@wordpress/element": "^2.16.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,10 @@
+{
+  "project": {
+    "name": "WP React Hooks",
+    "namespace": "wp-react-hooks",
+    "description": "Hooks library for WordPress.",
+    "website": "https://tinypixel.dev",
+    "author": "Kelly M.",
+    "email": "developers@tinypixel.dev"
+  }
+}
