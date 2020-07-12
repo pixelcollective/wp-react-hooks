@@ -1,0 +1,78 @@
+---
+name: useColors
+menu: Editor
+route: /use-colors
+---
+
+# useColors
+
+The `useColors` hook provides an interface for consuming and modifying block editor settings.
+
+## Basics
+
+** Import **
+
+```jsx
+import {useColors} from '@tinypixelco/wp-react-hooks'
+```
+
+** Use **
+
+```jsx
+const {colors, setColors, addColor} = useColors()
+```
+
+** The `colors` array is made up of objects that are shaped like this **
+
+```jsx
+{
+  name: "Primary",
+  slug: "primary",
+  color: "#0073a8",
+}
+```
+
+## List colors
+
+List all the colors registered with WordPress.
+
+```jsx
+import {useColors} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const [colors, setColors] = useColors()
+
+  return (
+    <div>
+      {colors && JSON.stringify(colors)}
+    </div>
+  )
+}
+```
+
+## addColor
+
+Add a color to the palette.
+
+```jsx
+{addColor} = useColors()
+
+addColor({
+  name: "New",
+  slug: "new",
+  color: "#0073a8",
+})
+```
+
+## setColors
+
+Replace the palette with a new one, or otherwise process the array and return what you like.
+
+```jsx
+{setColors} = useColors()
+
+setColors([
+  {name: 'black', slug: 'black', color: '#000000'},
+  {name: 'white', slug: 'white', color: '#ffffff'},
+])
+```

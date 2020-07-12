@@ -29,8 +29,8 @@
         {
           "name": "/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },
@@ -75,8 +75,8 @@
         {
           "name": "/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },
@@ -121,8 +121,8 @@
         {
           "name": "/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },
@@ -167,8 +167,8 @@
         {
           "name": "/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },

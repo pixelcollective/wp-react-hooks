@@ -114,6 +114,47 @@
       }
     },
     {
+      "key": "src/src/hooks/useColors.mdx",
+      "value": {
+        "name": "useColors",
+        "menu": "Editor",
+        "route": "/use-colors",
+        "id": "d2a392d5e78b0e4d76d3751aab0c0def",
+        "filepath": "src/src/hooks/useColors.mdx",
+        "fullpath": "/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/src/hooks/useColors.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-src-hooks-use-colors",
+        "headings": [
+          {
+            "slug": "usecolors",
+            "depth": 1,
+            "value": "useColors"
+          },
+          {
+            "slug": "basics",
+            "depth": 2,
+            "value": "Basics"
+          },
+          {
+            "slug": "list-colors",
+            "depth": 2,
+            "value": "List colors"
+          },
+          {
+            "slug": "addcolor",
+            "depth": 2,
+            "value": "addColor"
+          },
+          {
+            "slug": "setcolors",
+            "depth": 2,
+            "value": "setColors"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/src/hooks/usePostTemplate.mdx",
       "value": {
         "name": "usePostTemplate",
