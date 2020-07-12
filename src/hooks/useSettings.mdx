@@ -1,0 +1,177 @@
+---
+name: useSettings
+route: /use-settings
+---
+
+# useSettings
+
+The `useSettings` hook provides an interface for consuming and modifying block editor settings.
+
+To get started, import it:
+
+```js
+import {useSettings} from '@tinypixelco/wp-react-hooks'
+```
+
+Once imported, call the hook. It will return an array with the settings object and a function to modify it.
+
+```js
+const [settings, setSettings] = useSettings()
+```
+
+## Basic example
+
+```jsx
+import {useEffect} from '@wordpress/element'
+import {useSettings} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const [settings, setSettings] = useSettings()
+
+  useEffect(() => {
+    settings && console.log(settings)
+  }, [settings])
+
+  return []
+}
+```
+
+## Use cases
+
+### Modify the post title placeholder
+
+```jsx
+useEffect(() => {
+  setSettings({
+    titlePlaceholder: `Let's get started`,
+  })
+}, [])
+```
+
+### Add a new font size
+
+```jsx
+const dynamicFontSize = {
+  name: 'Dynamic',
+  shortName: 'd',
+  size: 69,
+  slug: 'dynamic',
+}
+
+useEffect(() => {
+  setSettings({
+    fontSizes: [
+      ...settings.fontSizes,
+      dynamicFontSize,
+    ],
+  })
+}, [])
+```
+
+### Disable custom style settings
+
+```jsx
+useEffect(() => {
+  setSettings({
+    disableCustomColors: true,
+    disableCustomFontSizes: true,
+    disableCustomGradients: true,
+  })
+}, [])
+```
+
+## Additional details
+
+This hook utilizes [store/useBlockEditorStore](/store/use-block-editor-store).
+
+Relevant WordPress documentation:
+  - [https://developer.wordpress.org/block-editor/data/data-core-block-editor/#getSettings](https://developer.wordpress.org/block-editor/data/data-core-block-editor/#getSettings)
+  - [https://developer.wordpress.org/block-editor/data/data-core-block-editor/#updateSettings](https://developer.wordpress.org/block-editor/data/data-core-block-editor/#updateSettings)
+
+### The `settings` object
+
+It's a big object. There is a bit of editorializing going on with the ordering here (most useful seeming stuff at the top).
+
+```js
+const settings = {
+  alignWide: true,
+  allowedBlockTypes: true,
+  titlePlaceholder: "Add title",
+  bodyPlaceholder: "Start writing or type / to choose a block",
+  colors: [
+    { name: null, slug: "primary", color: "#0073a8" },
+    // ...
+  ],
+  gradients: [
+    {
+      name: "Vivid cyan blue to vivid purple",
+      gradient: "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+      slug: "vivid-cyan-blue-to-vivid-purple"
+    },
+    // ...
+  ],
+  fontSizes: [
+    { name: "Small", shortName: "S", size: 19.5, slug: "small" },
+    // ...
+  ],
+  imageSizes: [
+    { slug: "thumbnail", name: "Thumbnail" },
+    // ...
+  ],
+  imageDimensions: {
+    thumbnail: { width: 150, height: 150, crop: true },
+    // ...
+  },
+  styles: [
+    {
+      css: ":root{--wp-admin-theme-color:#007cba; ..."
+    },
+    // ...
+  ],
+  allowedMimeTypes: null,
+  disableCustomColors: false,
+  disableCustomFontSizes: false,
+  disableCustomGradients: false,
+  focusMode: false,
+  hasFixedToolbar: false,
+  isRTL: false,
+  maxWidth: 580,
+  maxUploadFileSize: 0,
+  availableLegacyWidgets: {
+    WP_Widget_Pages: {
+      name: "Pages",
+      description: "A list of your site’s Pages.",
+      isReferenceWidget: false,
+      isHidden: true
+    },
+    // ...
+  },
+  hasPermissionsToManageWidgets: true,
+  '__experimentalBlockPatterns': [
+    {
+      title: "Two Columns of Text",
+      categories: ["columns", text"],
+      content: "<!-- wp:columns -->\n<div class=\"wp-block-columns\"> ...",
+      name: "core/text-two-columns"
+    },
+    // ..
+  ],
+  '__experimentalBlockPatternCategories': [
+    { name: "text", label: "Text" },
+    // ...
+  ],
+  '__experimentalCanUserUseUnfilteredHTML': true,
+  '__experimentalEnableLegacyWidgetBlock': false,
+  '__experimentalBlockDirectory': false,
+  '__experimentalEnableFullSiteEditing': false,
+  '__experimentalEnableFullSiteEditingDemo': false,
+  '__mobileEnablePageTemplates': false,
+  '__experimentalDisableCustomUnits': false,
+  '__experimentalDisableCustomLineHeight': false,
+  '__experimentalEnableCustomSpacing': false,
+  '__experimentalEnableLinkColor': false,
+  '__experimentalFeatures': { typography: { dropCap: false } },
+  '__experimentalPreferredStyleVariations': { value: {} },
+  '__experimentalReusableBlocks': []
+}
+```

@@ -18,14 +18,20 @@
   "scripts": {
     "bud:generate": "bud",
     "dev": "budpack --env development",
-    "build": "budpack --env production"
+    "build": "budpack --env production",
+    "doc:dev": "docz dev",
+    "doc:build": "docz build",
+    "doc:serve": "docz build && docz serve"
   },
   "devDependencies": {
     "@roots/bud": "roots/bud#master",
     "@roots/bud-generators": "roots/bud-generators#master",
     "@roots/budpack": "^0.0.27",
     "@wordpress/data": "^4.22.0",
-    "@wordpress/element": "^2.16.0"
+    "@wordpress/element": "^2.16.0",
+    "docz": "^2.3.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "dependencies": {}
 }
