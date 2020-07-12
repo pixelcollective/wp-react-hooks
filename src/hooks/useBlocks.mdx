@@ -22,22 +22,20 @@ const {blocks, count} = useBlocks()
 
 ## Examples
 
-### useBlocks hook
+### Use `blocks` to list blocks used in post
 
 ```jsx
-import {useBlockEditorStore} from './store/useBlockEditorStore'
+import {useBlocks} from '@tinypixelco/wp-react-hooks'
 
-const useBlocks = () => {
-  const {select} = useBlockEditorStore()
+const component = () => {
+  const {blocks} = useBlocks()
 
-  return {
-    blocks: select.getBlocks(),
-    count: select.getGlobalBlockCount(),
-  }
+  return (
+    <ul>
+      {blocks.map((block, id) => <li key={id}>{block.name}</li>)}
+    </ul>
+  )
 }
-
-export {useBlocks}
-
 ```
 
 ### Display count of blocks used in post

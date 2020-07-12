@@ -101,9 +101,9 @@
             "value": "Examples"
           },
           {
-            "slug": "useblocks-hook",
+            "slug": "use-blocks-to-list-blocks-used-in-post",
             "depth": 3,
-            "value": "useBlocks hook"
+            "value": "Use  blocks  to list blocks used in post"
           },
           {
             "slug": "display-count-of-blocks-used-in-post",
