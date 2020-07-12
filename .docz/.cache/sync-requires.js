@@ -5,7 +5,6 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/.docz/.cache/dev-404-page.js"))),
   "component---src-hooks-mdx": hot(preferDefault(require("/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/src/hooks.mdx"))),
   "component---src-hooks-store-use-block-editor-store-mdx": hot(preferDefault(require("/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/src/hooks/store/useBlockEditorStore.mdx"))),
   "component---src-hooks-use-blocks-mdx": hot(preferDefault(require("/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/src/hooks/useBlocks.mdx"))),
