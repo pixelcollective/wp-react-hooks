@@ -16,7 +16,7 @@ if (hasGatsbyConfig) {
 }
 
 const config = {
-  pathPrefix: '/',
+  pathPrefix: '/wp-react-hooks/',
 
   siteMetadata: {
     title: '@tinypixelco/wp-react-hooks',
@@ -48,7 +48,7 @@ const config = {
         'open-browser': null,
         root:
           '/Users/kellymears/code/projects/cli/bud/bud-sandbox/web/app/themes/wp-react-hooks/.docz',
-        base: '/',
+        base: '/wp-react-hooks/',
         source: './',
         'gatsby-root': null,
         files: '**/*.{md,markdown,mdx}',

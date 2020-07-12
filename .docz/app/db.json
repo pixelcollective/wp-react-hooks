@@ -7,6 +7,7 @@
     "native": false,
     "themeConfig": {},
     "separator": "-",
+    "base": "/wp-react-hooks/",
     "src": "src",
     "dest": "docs"
   },
