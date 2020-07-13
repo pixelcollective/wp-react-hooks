@@ -1,0 +1,106 @@
+---
+name: useFontSizes
+menu: Editor
+route: /use-font-size
+---
+
+# useFontSizes
+
+The `useFontSizes` hook provides an interface for consuming and modifying the block editor preset font sizes.
+
+## Basics
+
+** Import **
+
+```jsx
+import {useFontSizes} from '@tinypixelco/wp-react-hooks'
+```
+
+** Use **
+
+```jsx
+const {fontSizes, setFontSizes, addColor} = useFontSizes()
+```
+
+** The `fontSizes` array is made up of objects that are shaped like this **
+
+```jsx
+{
+  name: 'Small',
+  shortName: 's',
+  size: 8,
+  slug: 'small',
+}
+```
+
+## List font sizes
+
+List all the font sizes registered with WordPress.
+
+```jsx
+import {useFontSizes} from '@tinypixelco/wp-react-hooks'
+
+const component = () => {
+  const [fontSizes] = useFontSizes()
+
+  return (
+    <div>
+      {fontSizes && JSON.stringify(fontSizes)}
+    </div>
+  )
+}
+```
+
+## addFontSize
+
+Add a font size to the existing presets.
+
+```jsx
+{addFontSize} = useFontSizes()
+
+addFontSize({
+  name: 'Dynamic',
+  shortName: 'd',
+  size: 69,
+  slug: 'dynamic',
+})
+```
+
+## setFontSizes
+
+Replace the preset sizes with a new set.
+
+```jsx
+{setFontSizes} = useFontSizes()
+
+setFontSizes([
+  {
+    name: 'Dynamic',
+    shortName: 'd',
+    size: 69,
+    slug: 'dynamic',
+  },
+])
+
+### addFontSize
+
+```jsx
+{fontSizes, setFontSizes} = useFontSizes()
+
+const newFontSize = {
+  name: 'Dynamic',
+  shortName: 'd',
+  size: 69,
+  slug: 'dynamic',
+}
+
+useEffect(() => {
+  setSettings({
+    fontSizes: [
+      ...fontSizes,
+      newFontSize,
+    ],
+  })
+}, [])
+```
+```

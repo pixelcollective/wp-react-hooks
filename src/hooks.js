@@ -1,4 +1,6 @@
 import {useBlocks} from './hooks/useBlocks'
+import {useColors} from './hooks/useColors'
+import {useFontSizes} from './hooks/useFontSizes'
 import {usePostTitle} from './hooks/usePostTitle'
 import {usePostTemplate} from './hooks/usePostTemplate'
 import {usePostType} from './hooks/usePostType'
@@ -7,6 +9,8 @@ import {useSettings} from './hooks/useSettings'
 
 export {
   useBlocks,
+  useColors,
+  useFontSizes,
   usePostTitle,
   usePostTemplate,
   usePostType,

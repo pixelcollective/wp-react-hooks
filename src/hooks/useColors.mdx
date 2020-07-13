@@ -6,7 +6,7 @@ route: /use-colors
 
 # useColors
 
-The `useColors` hook provides an interface for consuming and modifying block editor settings.
+The `useColors` hook provides an interface for consuming and modifying the block editor color palette.
 
 ## Basics
 
@@ -40,7 +40,7 @@ List all the colors registered with WordPress.
 import {useColors} from '@tinypixelco/wp-react-hooks'
 
 const component = () => {
-  const [colors, setColors] = useColors()
+  const [colors] = useColors()
 
   return (
     <div>

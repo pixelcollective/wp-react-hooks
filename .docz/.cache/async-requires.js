@@ -6,6 +6,7 @@ exports.components = {
   "component---src-hooks-store-use-block-editor-store-mdx": () => import("./../../../src/hooks/store/useBlockEditorStore.mdx" /* webpackChunkName: "component---src-hooks-store-use-block-editor-store-mdx" */),
   "component---src-hooks-use-blocks-mdx": () => import("./../../../src/hooks/useBlocks.mdx" /* webpackChunkName: "component---src-hooks-use-blocks-mdx" */),
   "component---src-hooks-use-colors-mdx": () => import("./../../../src/hooks/useColors.mdx" /* webpackChunkName: "component---src-hooks-use-colors-mdx" */),
+  "component---src-hooks-use-font-sizes-mdx": () => import("./../../../src/hooks/useFontSizes.mdx" /* webpackChunkName: "component---src-hooks-use-font-sizes-mdx" */),
   "component---src-hooks-use-post-template-mdx": () => import("./../../../src/hooks/usePostTemplate.mdx" /* webpackChunkName: "component---src-hooks-use-post-template-mdx" */),
   "component---src-hooks-use-post-title-mdx": () => import("./../../../src/hooks/usePostTitle.mdx" /* webpackChunkName: "component---src-hooks-use-post-title-mdx" */),
   "component---src-hooks-use-post-type-mdx": () => import("./../../../src/hooks/usePostType.mdx" /* webpackChunkName: "component---src-hooks-use-post-type-mdx" */),
